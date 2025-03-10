@@ -1,0 +1,318 @@
+/* Estilos básicos minimalistas con colores fríos */
+:root {
+    --primary-color: #3F72AF;     /* Azul medio */
+    --secondary-color: #112D4E;   /* Azul oscuro */
+    --accent-color: #4A7BCC;      /* Azul acento */
+    --background-color: #F9F7F7;  /* Gris muy claro */
+    --card-bg: #ffffff;           /* Blanco */
+    --text-primary: #333333;      /* Texto oscuro */
+    --text-secondary: #666666;    /* Texto gris */
+    --border-color: #DBE2EF;      /* Azul muy claro */
+    --success-color: #4CAF50;     /* Verde */
+    --badge-color: #5E81AC;       /* Azul nórdico */
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+main.container {
+    flex-grow: 1;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Tarjetas de noticias */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    background-color: var(--card-bg);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.text-muted {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+/* Botones */
+.btn {
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-outline-secondary {
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--border-color);
+    color: var(--secondary-color);
+}
+
+.btn-favorito .bi-star-fill {
+    color: #FFD700; /* Dorado para estrellas marcadas */
+}
+
+/* Badges (categorías) */
+.badge {
+    background-color: var(--badge-color);
+    color: white;
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 0.4em 0.6em;
+    border-radius: 4px;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+    display: inline-block;
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.page-link {
+    color: var(--primary-color);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.page-link:hover {
+    color: var(--secondary-color);
+    background-color: var(--border-color);
+    border-color: var(--primary-color);
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.page-item.disabled .page-link {
+    color: var(--text-secondary);
+    background-color: var(--background-color);
+    border-color: var(--border-color);
+    opacity: 0.6;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: var(--secondary-color) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: white !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Campo de búsqueda */
+.form-control {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(63, 114, 175, 0.25);
+}
+
+/* Alertas */
+.alert {
+    border: none;
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.alert-info {
+    background-color: #E1F5FE;
+    color: #0277BD;
+}
+
+.alert-success {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+}
+
+.alert-danger {
+    background-color: #FFEBEE;
+    color: #C62828;
+}
+
+.alert-warning {
+    background-color: #FFF8E1;
+    color: #F57F17;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color) !important;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+/* Indicador de carga */
+#loading-indicator {
+    padding: 3rem 0;
+}
+
+.spinner-border {
+    color: var(--primary-color);
+}
+
+/* Modal */
+.modal-content {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px 8px 0 0;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+/* Info de paginación */
+#pagina-actual {
+    background-color: var(--border-color);
+    color: var(--secondary-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#total-noticias {
+    background-color: var(--primary-color);
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+}
+
+/* Estilos responsive */
+@media (max-width: 767px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .card img {
+        height: 150px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
