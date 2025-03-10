@@ -2,8 +2,6 @@
 
 Un lector de feeds ATOM y RSS moderno y fácil de usar, creado con HTML, CSS y JavaScript puro. Esta aplicación web te permite leer, buscar y guardar como favoritas noticias de múltiples fuentes.
 
-![Captura de pantalla del lector](screenshot.png)
-
 ## Características
 
 - **Soporte para formatos ATOM y RSS**: Compatible con ambos formatos de sindicación.
